@@ -12,13 +12,16 @@ then
     exit 1
 fi
 
+r="\e[31m"
+g="\e[32m"
+n="\e[0m"
 validate(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2... failed"
+        echo -e "$2... \e[31m failed"
         exit 1
     else 
-        echo "$2.... succeeded"
+        echo -e "$2.... \e[32m succeeded"
     fi
 }
 
