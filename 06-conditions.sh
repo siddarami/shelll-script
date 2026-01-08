@@ -2,7 +2,7 @@
 #!/bin/bash 
 
 number=$1
-if [ $number -ge 10]
+if [ $number -ge 10 ]
 then 
     echo "the number is greater than or equal to 10"
 else 
