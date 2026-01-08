@@ -4,6 +4,7 @@
 
 date=$(date)
 script_name=$0
+nkdir reddy 
 logfile=/reddy/$script_name-$date.log
 userid=$(id -u)
 if [ $userid -ne 0 ]
