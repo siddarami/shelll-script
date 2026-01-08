@@ -1,6 +1,10 @@
 
 #!/bin/bash 
 
+
+date=$(date)
+script_name=$0
+logfile=/reddy/$script_name-$date.log
 userid=$(id -u)
 if [ $userid -ne 0 ]
 then 
@@ -18,7 +22,7 @@ validate(){
     fi
 }
 
-yum install git -y 
+yum install git -y &>> $logfile
 validate $? "installtaion git"
-yum install mysql -y 
+yum install mysql -y &>> $logfile
 validate $? "installation mysql"
