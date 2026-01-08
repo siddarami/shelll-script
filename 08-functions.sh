@@ -4,8 +4,7 @@
 
 date=$(date)
 script_name=$0
-mkdir reddy 
-logfile=/reddy/$script_name-$date.log
+logfile=/tmp/$script_name-$date.log
 userid=$(id -u)
 if [ $userid -ne 0 ]
 then 
