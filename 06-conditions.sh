@@ -1,7 +1,7 @@
 
 #!/bin/bash 
-
-number=$1
+echo "enter a number:"
+read number
 if [ $number -ge 10 ]
 then 
     echo "the number is greater than or equal to 10"
