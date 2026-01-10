@@ -32,7 +32,7 @@ validate(){
 for i in $@
 do 
     yum list installed $i &>> $logfile 
-    if [ $? -ne o ]
+    if [ $? -ne 0 ];
     then 
         echo -e "$Y $i is not installed ,$N installing now.."
         yum install $i -y &>> $logfile
