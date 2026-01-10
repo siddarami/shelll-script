@@ -11,7 +11,7 @@ N="\e[0m"
 
 #validate function 
 
-/*
+: <<'EOF'
 validate(){
      if [ $1 -ne 0 ];
      then 
@@ -21,7 +21,7 @@ validate(){
             echo -e "$2... $G success"
      fi
 } 
-*/
+EOF
 
 
 
