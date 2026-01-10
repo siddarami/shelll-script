@@ -3,7 +3,7 @@
 #!/bin/bash
 
 date=$(date)
-script-name=$0
+script_name=$0
 logfile=/tmp/$script_name-$date.log
 R="\e[31m"
 G="\e[32m"
@@ -11,7 +11,7 @@ N="\e[0m"
 
 #validate function 
 
-:'
+/*
 validate(){
      if [ $1 -ne 0 ];
      then 
@@ -20,8 +20,8 @@ validate(){
         else 
             echo -e "$2... $G success"
      fi
-}
-'
+} 
+*/
 
 
 
