@@ -46,9 +46,11 @@ do
             exit 1
         else 
             echo -e "$line installation $G success"
+            exit 0
         fi
     else
         echo -e " $G $line is alredy installed  $N"
+        exit 0
     fi
 done 
 
