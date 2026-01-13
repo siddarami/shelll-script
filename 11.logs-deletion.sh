@@ -12,6 +12,6 @@ deleted_files=$(find $log_path -name "*.log" -type f -mmin +1)
 while read file
 do 
     echo "deleting file :$file" &>> $logfile
-    rm -rf $file 
+    rm -rf $file  &>> $logfile
 
-done <<< "$deleted_files" 
+done <<< "$deleted_files"  
