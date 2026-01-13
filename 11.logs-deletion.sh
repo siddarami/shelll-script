@@ -5,9 +5,12 @@
 log_path="/home/centos/logs"
 date=$(/usr/bin/date +%F)
 script_name=$(basename "$0")
-logfile=$log_path/$script_name-$date.log
+audit_path="/home/centos/audit-logs"
+mkdir -p "$audit_path"
 
-deleted_files=$(/usr/bin/find $log_path -name "*.log" ! -name "$(basename "$logfile")" -type f -mmin +1)
+logfile=$audit_path/${script_name}-${date}.log
+
+deleted_files=$(/usr/bin/find $log_path -name "*.log"  -type f -mmin +1)
 
 while read file
 do 
