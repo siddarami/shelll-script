@@ -8,6 +8,8 @@ threshold=10
 
 while IFS= read line 
 do 
-   uage=$( echo $line | awk '{print $6}' | cut -d '%' -f1)
+   usage=$( echo $line | awk '{print $6}' | cut -d '%' -f1)
+   echo $usage
 
 done <<<$diskusage 
+ 
