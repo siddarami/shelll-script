@@ -27,8 +27,8 @@ then
     exit 1
 fi
 
-#cp mongo.repo /etc/yum.repos.d/mongo.repo &>>$logfile 
-#validate $? "copying mongo repo file"
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $logfile 
+validate $? "copying mongo repo file"
 
 yum install mongodb-org -y &>> $logfile
 validate $? "installation mongodb"
