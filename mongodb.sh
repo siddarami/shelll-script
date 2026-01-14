@@ -14,11 +14,11 @@ N="\e[0m"
 validate(){
     if [ $1 -ne 0 ];
     then 
-       echo -e "$2.. $R failes" &>>$logfile
+       echo -e "$2.. $R failes" 
        exit 1
     else
-        echo -e "$2... $G success" &>>$logfile
-    fi 
+        echo -e "$2... $G success" 
+    fi
 }
 
 if [ $userid -ne 0 ];
@@ -28,7 +28,7 @@ then
 fi
 
 #cp mongo.repo /etc/yum.repos.d/mongo.repo &>>$logfile 
-validate $? "copying mongo repo file"
+#validate $? "copying mongo repo file"
 
 yum install mongodb-org -y &>>$logfile
 validate $? "installation mongodb"
